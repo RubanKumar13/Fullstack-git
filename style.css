@@ -1,0 +1,70 @@
+:root{
+    --primary:red;
+    --secondary:white;
+    --background:black;
+}
+
+
+.card{
+    /* width: 400px; */
+    height: 400px;
+    border: 2px solid black;
+    padding: 20px ;
+
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+h1{
+    --primary:yellow;
+    color:var(--primary);
+    background-color: var(--background);
+}
+
+
+@media print{
+    h1{
+        color: red;
+    }
+    .card{
+       display: none;
+    }
+}
+
+/* 
+@media all{
+    h1{
+        background-color: red;
+        color:black ;
+    }
+} */
+/* 
+@media screen and (min-width:768px){
+    h1{
+      color: aqua;
+      background-color: yellow;
+    }
+} */
+
+
+@media screen and (max-width:768px){
+    .box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+
+}
+
+@media screen and (max-width:425px){
+    .box{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
